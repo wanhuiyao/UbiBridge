@@ -9,16 +9,14 @@ class Application : public QApplication
     Q_OBJECT
 public:
     Application(int argc, char** argv);
-    void start();
 
-    void waitForConnection();
 
 signals:
 public slots:
 
 private:
     MainWindow window;
-    NetworkIO networkIO;
+    ads_bridge::NetworkIO* pNetworkIO;
 };
 
 #endif // APPLICATION_H
